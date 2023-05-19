@@ -1,4 +1,4 @@
-<h1 class="bg-slate-500 mt-4 font-bold">
+<h1 class="bg-slate-500 mt-4 font-bold p-2">
   Pipes <small class="font-normal">Angular</small>
 </h1>
 <div class="m-8">
@@ -27,6 +27,38 @@
         >
         <ng-container *ngIf="element.pipe === 'Lowercase'">
           {{ element.variable | lowercase }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'Slice:3'">
+          {{ element.variable | slice : 3 }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'Slice:0:3'">
+          {{ element.variable | slice : 0 : 3 }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'Slice:1:5'">
+          {{ element.variable | slice : 1 : 5 }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'number:1.0-0'">
+          {{ element.variable | number : "1.0-0" }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'number:.0-2'">
+          {{ element.variable | number : ".0-2" }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'percent'">
+          {{ element.variable | percent }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'percent:2.2-2'">
+          {{ element.variable | percent : "2.2-2" }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'currency'">
+          {{ element.variable | currency }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'currency:EUR'">
+          {{ element.variable | currency : "EUR" }}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'currency:CAD:symbol:.0-0'">
+          {{
+            element.variable | currency : "CAD" : "symbol" : ".0-0"
+          }}</ng-container
         >
       </td>
     </ng-container>
