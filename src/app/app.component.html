@@ -60,6 +60,21 @@
             element.variable | currency : "CAD" : "symbol" : ".0-0"
           }}</ng-container
         >
+        <ng-container *ngIf="element.pipe === 'Async'">
+          {{ element.variable | async}}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'date'">
+          {{ element.variable | date}}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'date:medium'">
+          {{ element.variable | date:'medium'}}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'date:short'">
+          {{ element.variable | date:'short'}}</ng-container
+        >
+        <ng-container *ngIf="element.pipe === 'date:MMMM-dd-y'">
+          {{ element.variable | date:'MMMM-dd-y':'ESP'}}</ng-container
+        >
       </td>
     </ng-container>
 
@@ -67,3 +82,12 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
+
+<h3>JSON</h3>
+<hr>
+<div class="mb-8">
+  <pre>
+    {{heroe | json}}
+  </pre>
+</div>
+<div class="h-8"></div>

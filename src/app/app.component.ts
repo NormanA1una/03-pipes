@@ -18,6 +18,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { variable: 1234.5, pipe: 'currency' },
   { variable: 1234.5, pipe: 'currency:EUR' },
   { variable: 1234.5, pipe: 'currency:CAD:symbol:.0-0' },
+  {
+    variable: new Promise<string>((resolve) => {
+      setTimeout(() => {
+        resolve('Llego la data!');
+      }, 4500);
+    }),
+    pipe: 'Async',
+  },
+  { variable: new Date(), pipe: 'date' },
+  { variable: new Date(), pipe: 'date:medium' },
+  { variable: new Date(), pipe: 'date:short' },
+  { variable: new Date(), pipe: 'date:MMMM-dd-y' },
 ];
 
 @Component({
@@ -27,6 +39,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AppComponent {
   nombre = 'Capitan America';
+  heroe = {
+    nombre: 'Logan',
+    clave: 'Wolverine',
+    edad: 500,
+    direccion: {
+      calle: 'primera',
+      casa: 20,
+    },
+  };
 
   displayedColumns: string[] = ['variable', 'pipe', 'salida'];
   dataSource = ELEMENT_DATA;
