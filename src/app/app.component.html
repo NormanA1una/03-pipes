@@ -1,5 +1,5 @@
 <h1 class="bg-slate-500 mt-4 font-bold p-2">
-  Pipes <small class="font-normal">Angular</small>
+  "Pipes" <small class="font-normal">from Angular</small>
 </h1>
 <div class="m-8">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -61,19 +61,19 @@
           }}</ng-container
         >
         <ng-container *ngIf="element.pipe === 'Async'">
-          {{ element.variable | async}}</ng-container
+          {{ element.variable | async }}</ng-container
         >
         <ng-container *ngIf="element.pipe === 'date'">
-          {{ element.variable | date}}</ng-container
+          {{ element.variable | date }}</ng-container
         >
         <ng-container *ngIf="element.pipe === 'date:medium'">
-          {{ element.variable | date:'medium'}}</ng-container
+          {{ element.variable | date : "medium" }}</ng-container
         >
         <ng-container *ngIf="element.pipe === 'date:short'">
-          {{ element.variable | date:'short'}}</ng-container
+          {{ element.variable | date : "short" }}</ng-container
         >
         <ng-container *ngIf="element.pipe === 'date:MMMM-dd-y'">
-          {{ element.variable | date:'MMMM-dd-y':'ESP'}}</ng-container
+          {{ element.variable | date : "MMMM-dd-y" }}</ng-container
         >
       </td>
     </ng-container>
@@ -84,10 +84,10 @@
 </div>
 
 <h3>JSON</h3>
-<hr>
+<hr />
 <div class="mb-8">
   <pre>
-    {{heroe | json}}
+    {{ heroe | json }}
   </pre>
 </div>
 <div class="h-8"></div>
