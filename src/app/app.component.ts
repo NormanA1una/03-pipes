@@ -6,6 +6,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
+  { variable: 'NormAN ArAnda LunA', pipe: 'capitalizar' },
   { variable: 'Capitan América', pipe: 'Uppercase' },
   { variable: 'Capitan América', pipe: 'Lowercase' },
   { variable: 'Capitan América', pipe: 'Slice:3' },
@@ -30,6 +31,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { variable: new Date(), pipe: 'date:medium' },
   { variable: new Date(), pipe: 'date:short' },
   { variable: new Date(), pipe: 'date:MMMM-dd-y' },
+  { variable: new Date(), pipe: 'date:MMMM-dd-y: string :en' },
+  { variable: new Date(), pipe: 'date:MMMM-dd-y: string :idioma' },
 ];
 
 @Component({
@@ -38,6 +41,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  idioma: string = '';
+
   nombre = 'Capitan America';
   heroe = {
     nombre: 'Logan',
