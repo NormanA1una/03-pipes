@@ -124,4 +124,18 @@
     {{ heroe | json }}
   </pre>
 </div>
+<h3 class="mt-4">Dom Seguro</h3>
+<hr />
+<div>
+  <iframe
+    width="560"
+    height="315"
+    [src]="videoUrl | domseguro"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  >
+  </iframe>
+</div>
 <div class="h-8"></div>

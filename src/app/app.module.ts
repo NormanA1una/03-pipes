@@ -15,11 +15,12 @@ registerLocaleData(localeFr);
 //components
 import { AppComponent } from './app.component';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 //services
 
 @NgModule({
-  declarations: [AppComponent, CapitalizarPipe],
+  declarations: [AppComponent, CapitalizarPipe, DomseguroPipe],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

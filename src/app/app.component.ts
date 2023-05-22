@@ -43,6 +43,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AppComponent {
   idioma: string = '';
 
+  videoUrl = 'https://www.youtube.com/embed/O6qVieflwqs';
+
   nombre = 'Capitan America';
   heroe = {
     nombre: 'Logan',
