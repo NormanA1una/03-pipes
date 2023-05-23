@@ -33,6 +33,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { variable: new Date(), pipe: 'date:MMMM-dd-y' },
   { variable: new Date(), pipe: 'date:MMMM-dd-y: string :en' },
   { variable: new Date(), pipe: 'date:MMMM-dd-y: string :idioma' },
+  { variable: 'Capitan America', pipe: 'contrasenia' },
 ];
 
 @Component({
@@ -42,6 +43,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AppComponent {
   idioma: string = '';
+  activar: boolean = true;
 
   videoUrl = 'https://www.youtube.com/embed/O6qVieflwqs';
 
